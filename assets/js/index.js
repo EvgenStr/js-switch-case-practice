@@ -22,7 +22,9 @@ switch (Boolean(inp)) {
 }
 
 isNaN(num1 - num2) ? console.log("Invalid number") : calculation();
-
+/**
+ * function calculates values and output value in console
+ */
 function calculation() {
   switch (operation) {
     case "+": {
