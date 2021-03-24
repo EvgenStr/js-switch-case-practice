@@ -3,22 +3,21 @@ let num1 = prompt("Enter number one:");
 let num2 = prompt("Enter number two:");
 let operation = prompt("Enter operation (+, -, *,/ ):");
 
-
 switch (Boolean(inp)) {
   case inp <= 10: {
-    console.log(inp, "-first decade");
+    console.log(inp, "- first decade");
     break;
   }
   case inp <= 20: {
-    console.log(inp, "-second decade");
+    console.log(inp, "- second decade");
     break;
   }
   case inp <= 31: {
-    console.log(inp, "-third decade");
+    console.log(inp, "- third decade");
     break;
   }
   default: {
-    console.log("error");
+    console.log("Wrong value, enter a day within from 1 to 31");
   }
 }
 
