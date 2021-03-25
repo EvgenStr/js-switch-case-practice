@@ -1,18 +1,18 @@
 let inp = prompt("Enter day (1-31):");
-let num1 = prompt("Enter number one:");
-let num2 = prompt("Enter number two:");
+const num1 = +prompt("Enter number one:");
+const num2 = +prompt("Enter number two:");
 let operation = prompt("Enter operation (+, -, *,/ ):");
 
-switch (Boolean(inp)) {
-  case inp <= 10: {
+switch (true) {
+  case inp >0 && inp <= 10: {
     console.log(inp, "- first decade");
     break;
   }
-  case inp <= 20: {
+  case inp > 10 && inp <= 20: {
     console.log(inp, "- second decade");
     break;
   }
-  case inp <= 31: {
+  case inp >20 && inp <= 31: {
     console.log(inp, "- third decade");
     break;
   }
@@ -21,31 +21,29 @@ switch (Boolean(inp)) {
   }
 }
 
-isNaN(num1 - num2) ? console.log("Invalid number") : calculation();
+// isNaN(num1 - num2) ? console.log("Invalid number") : calculation();
+console.log(calculation(num1, num1,operation))
 
 /**
  * function calculates values and output value in console
  */
-function calculation() {
+function calculation(num1, num2, operation) {
+  if (isNaN(num1 - num2)) return false;
   switch (operation) {
     case "+": {
-      console.log(`Result: ${num1} + ${num2} = ${+num1 + +num2}`);
-      break
+       return `Result: ${num1} + ${num2} = ${num1 + num2}`;
     }
     case "-": {
-      console.log(`Result: ${num1} - ${num2} = ${+num1 - +num2}`);
-      break
+      return `Result: ${num1} - ${num2} = ${num1 - num2}`;
     }
     case "*": {
-      console.log(`Result: ${num1} * ${num2} = ${+num1 * +num2}`);
-      break
+      return `Result: ${num1} * ${num2} = ${num1 * num2}`;
     }
     case "/": {
-      console.log(`Result: ${num1} / ${num2} = ${+num1 / +num2}`);
-      break
+      return `Result: ${num1} / ${num2} = ${num1 / num2}`;
     }
     default: {
-      console.log("Wrong operation: ", operation);
+      return `Wrong operation:  ${operation}`;
     }
   }
 }
