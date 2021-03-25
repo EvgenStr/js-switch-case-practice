@@ -27,19 +27,19 @@ switch (true) {
     break;
   }
   case operation === "+": {
-    console.log(calc(num1, num2, sum));
+   calc(num1, num2, sum);
     break;
   }
   case operation === "-": {
-    console.log(calc(num1, num2, sub));
+   calc(num1, num2, sub);
     break;
   }
   case operation === "*": {
-    console.log(calc(num1, num2, mul));
+    calc(num1, num2, mul);
     break;
   }
   case operation === "/": {
-    console.log(calc(num1, num2, div));
+    calc(num1, num2, div);
     break;
   }
   default: {
@@ -47,6 +47,7 @@ switch (true) {
 }
 
 function calc(a, b, cb) {
+  console.log(cb(a, b), cb)
   return cb(a, b);
 }
 
